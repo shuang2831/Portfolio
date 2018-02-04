@@ -1,0 +1,94 @@
+.LandingDiv {
+  text-align: left;
+}
+
+.introduction {
+
+  height:100vh;
+  width: 100vw;
+  
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+
+  justify-content: center;
+
+  display: flex;
+  flex-direction: column;
+
+ 
+  background: url('background8.jpg');
+ 
+  background-size: cover;
+
+
+  background-position: left top;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply; 
+
+  -webkit-transform: translateZ(0);
+
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.3);
+  
+  color: white;
+  z-index: 2;
+  
+}
+
+.fixed-bgg {  
+
+
+
+  height:100vh;
+  width: 100%;
+  
+  background-size: cover;  
+ 
+
+ 
+  background-size: cover;
+
+
+  background-position: left top;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply; 
+  z-index: 2;
+  position: absolute;
+}
+
+.App-header {
+  text-align: "left";
+  color: "black";
+}
+
+.App-title {
+  font-size: 2em;
+}
+
+.container {
+  width: 90%;
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 0em;
+}
+
+.Landing-text {
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.8em;
+  font-weight: 300;
+  font-size: 2.4rem;
+  letter-spacing: 0.1em;
+  z-index: 100;
+
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

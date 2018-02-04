@@ -1,0 +1,42 @@
+.App-header{
+    position: fixed;
+    text-align: center;
+    top: 20px;
+    width: 100%;
+    justify-content: space-between;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .App-logo {
+    width: 8em;
+    height: 8em;
+    fill: red;
+    margin-left: 2em;
+  }
+  
+  .Header-link {
+    padding-left: auto;
+    padding-right: auto;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: none;
+    background-color: inherit;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.2em;
+    outline:none;
+  }
+
+  .Header-link:hover {opacity: 0.5;}
+
+  .Header-links {
+    width: 20%;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+  

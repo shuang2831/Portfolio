@@ -1,0 +1,26 @@
+.SocialIcons {
+  text-align: center;
+}
+
+.Icon-block {
+  display: flex;
+  text-align: left;
+  width: 200px;
+  justify-content: space-between;
+  align-self: left;
+}
+
+.Icon {
+  height: 1.5em;
+  width: 1.5em;
+  padding: 0;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+  margin-top: 0.2em;
+  color: linear-gradient(135deg, #ff3c00 0%,#d900c6 100%);
+}
+
+.social-link {
+  text-decoration: none;
+  color: white;
+}

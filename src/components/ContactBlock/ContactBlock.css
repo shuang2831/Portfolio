@@ -1,0 +1,29 @@
+
+.contactTitle {
+  color: black;
+  font-size: 2em;
+  padding: 0.3em;
+  align-self: center;
+  font-family: 'Oswald', sans-serif;
+  text-decoration: none;
+}
+
+.contact-link {
+ padding-left: 1em;
+ padding-right: 1em;
+ text-decoration: none;
+ color: white;
+ font-family: 'Lato', sans-serif;
+ letter-spacing: 0.2em;
+}
+
+.contact-link:hover {
+  opacity: 0.5;
+}
+
+.contactContainer {
+  position: relative;
+  width: inherit;
+  padding-bottom: 5em;
+  background-color: rgba(17, 19, 29, 0.445);
+}

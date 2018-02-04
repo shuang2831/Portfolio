@@ -1,0 +1,31 @@
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "flexbox-react": "^4.4.0",
+    "radium": "^0.21.0",
+    "react": "^16.2.0",
+    "react-animations": "^1.0.0",
+    "react-blur": "^0.6.0",
+    "react-dom": "^16.2.0",
+    "react-icons": "^2.2.7",
+    "react-redux": "^5.0.6",
+    "react-scripts": "1.0.17",
+    "react-scroll-to-component": "^1.0.2",
+    "react-shapes": "^0.1.0",
+    "redux": "^3.7.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "deploy" : "npm run build&&gh-pages -d build"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.1.0",
+    "redux-devtools": "^3.4.1"
+  },
+  "homepage": "http://shuang2831.github.io/Portfolio"
+}
