@@ -17,8 +17,8 @@ export const actionCreators = {
 
 // Initial state of the store
 const initialState = {
-  windowWidth: window.visualViewport.width,
-  isMobile: window.visualViewport.width < 500? true : false,
+  windowWidth: window.screen.width,
+  isMobile: window.screen.width < 500? true : false,
 };
 
 // Function to handle actions and update the state of the store.
@@ -42,6 +42,8 @@ export const reducer = (state = initialState, action) => {
         windowWidth: newWindowWidth,
       };
     }
+    default:
+      break;
   }
 
   return state;

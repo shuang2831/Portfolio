@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import { shake } from 'react-animations';
-import Radium, {StyleRoot} from 'radium';
+import {StyleRoot} from 'radium';
 
 import './InOutGreeting.css';
 

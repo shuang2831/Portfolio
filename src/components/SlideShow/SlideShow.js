@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-import { slideInLeft, slideOutUp } from 'react-animations';
-import Radium, {StyleRoot} from 'radium';
-import {Rectangle, Circle, Ellipse, Line, Polyline, CornerBox, Triangle} from 'react-shapes';
+import {Circle} from 'react-shapes';
 import Flexbox from 'flexbox-react';
 
 class SlideShow extends Component {
@@ -48,7 +46,7 @@ class SlideShow extends Component {
     }
     return (
       <Flexbox flexDirection="column" alignItems="center">
-    <img onClick={this.nextPic.bind(this)} src={this.state.photos[this.state.index]} style={this.props.style}/>
+    <img alt="currentPic" onClick={this.nextPic.bind(this)} src={this.state.photos[this.state.index]} style={this.props.style}/>
       <Flexbox style={styles.circles}>
         {indents}
       </Flexbox>

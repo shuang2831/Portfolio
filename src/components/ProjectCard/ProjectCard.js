@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import './ProjectCard.css';
 import Flexbox from 'flexbox-react';
-import Radium, {StyleRoot} from 'radium';
+import Radium from 'radium';
 import SlideShow from '../SlideShow/SlideShow';
 import TechBoxes from '../TechBoxes/TechBoxes';
-import PhoneImage from '../PhoneImage/PhoneImage';
-import marioGif from '../../images/marioGif.gif'
 
 import Play from 'react-icons/lib/fa/play';
 import GitCircle from 'react-icons/lib/fa/github';
@@ -89,14 +87,17 @@ class ProjectCard extends Component {
         position: 'relative',
         // top: '-6.5em',
         // left: '-4em',
-        maxWidth: '80vw',
+        maxWidth: this.props.isMobile? '80vw' : '80vw',
         height: '17em',
         width: '25em',
         objectFit: 'cover',
       
         border: '5px solid rgb(255, 255, 255)',
         boxShadow: '0 10px 24px 0 rgba(0, 0, 0, 0.3)',
+        display: 'flex',
+        flexDirection: 'column',
         zIndex:'25',
+        alignSelf: 'center',
       },
       photoBottomLeft: {
         position: 'relative',
@@ -168,6 +169,7 @@ class ProjectCard extends Component {
       linkContainer: {
         marginTop: '1em',
         marginBottom: '1em',
+        alignSelf: this.props.isMobile? 'center' : 'flex-end',
       },
       linksContainer: {
         border: '5px solid rgb(255, 255, 255)',
@@ -179,6 +181,17 @@ class ProjectCard extends Component {
         width: '4em',
         borderRadius: '5px',
         justifyContent: 'space-evenly',
+        alignSelf: "flex-end",
+      },
+      linksContainerMobile: {
+        border: '5px solid rgb(255, 255, 255)',
+        boxShadow: '0 10px 24px 0 rgba(0, 0, 0, 0.3)',
+        backgroundColor: 'rgb(255, 255, 255)',
+        position: 'relative',
+        flexWrap: 'wrap',
+        borderRadius: '5px',
+        justifyContent: 'space-evenly',
+        alignSelf: "center",
       },
       aLink: {
         textDecoration: 'none',
@@ -189,19 +202,17 @@ class ProjectCard extends Component {
       
     }
     return (
-      <Flexbox class="cardContainer" flexDirection="row">
-        {this.props.mario && <StyleRoot>
-          <img src={marioGif} style={styles.elementToMoveRight}/>
-        </StyleRoot> }
-        <Flexbox style={styles.card} flexDirection="row">
+      <Flexbox className="cardContainer" flexDirection="column">
+        <Flexbox style={styles.card} flexDirection="column">
           <Flexbox style={styles.containers} >
           { !this.props.isMobile &&  <Flexbox flexDirection="column" style={styles.mediaContainer}>
               { this.props.topLeftVideo && !this.props.phoneScreen &&
-                <iframe src={this.props.topLeftVideo} frameborder="0" allow="encrypted-media"  allowfullscreen="allowfullscreen"
+                <iframe src={this.props.topLeftVideo} frameBorder="0" allow="encrypted-media"  allowFullScreen="allowfullscreen"
                   mozallowfullscreen="mozallowfullscreen" 
                   msallowfullscreen="msallowfullscreen" 
                   oallowfullscreen="oallowfullscreen" 
-                  webkitallowfullscreen="webkitallowfullscreen" style={styles.photoTopLeft}>
+                  webkitallowfullscreen="webkitallowfullscreen" style={styles.photoTopLeft}
+                  title="video">
                 </iframe>
               }
               { this.props.bottomLeftImage && !this.props.phoneScreen &&
@@ -213,39 +224,42 @@ class ProjectCard extends Component {
               <Flexbox style={styles.titleText}>
                   {this.props.title}
               </Flexbox>
-              <Flexbox class="card-description" style={styles.descriptionText}>
+              <Flexbox className="card-description" style={styles.descriptionText}>
                 {this.props.description}
               </Flexbox>
               <TechBoxes techArray={this.props.techArray} style={styles.techs} boxStyle={styles.techBox}/>
 
-              
+              <Flexbox flexDirection={'column'}>
               { this.props.isMobile && this.props.topLeftVideo && !this.props.phoneScreen &&
-                <iframe src={this.props.topLeftVideo} frameborder="0" allow="encrypted-media"  allowfullscreen="allowfullscreen"
+                <iframe src={this.props.topLeftVideo} frameBorder="0" allow="encrypted-media"  allowFullScreen="allowfullscreen"
                   mozallowfullscreen="mozallowfullscreen" 
                   msallowfullscreen="msallowfullscreen" 
                   oallowfullscreen="oallowfullscreen" 
-                  webkitallowfullscreen="webkitallowfullscreen" style={styles.photoTopLeft}>
+                  webkitallowfullscreen="webkitallowfullscreen" style={styles.photoTopLeft}
+                  title="video">
                 </iframe>
               }
                { this.props.isMobile && this.props.bottomLeftImage && !this.props.phoneScreen &&
                 <SlideShow photos={this.props.bottomLeftImage} style={styles.photoBottomLeft} chosenColor={this.props.mainColor}/>
               }  
               {  this.props.isMobile && this.props.phoneScreen && <SlideShow photos={this.props.phoneScreen} style={styles.phoneContainer} chosenColor={this.props.mainColor}/> }
-             
+             </Flexbox>   
             </Flexbox>
-            { (this.props.demoLink || this.props.gitLink || this.props.reportLink || this.props.exSiteLink) 
-              && <Flexbox flexDirection="column" alignSelf="flex-end" style={styles.linksContainer}>
+            
+          </Flexbox>
+          { (this.props.demoLink || this.props.gitLink || this.props.reportLink || this.props.exSiteLink) 
+              && <Flexbox flexDirection="column" style={this.props.isMobile? styles.linksContainerMobile : styles.linksContainer}>
               {this.props.gitLink && <a href={this.props.gitLink} target="_blank" style={styles.aLink} >
                  
-                <Flexbox flexDirection="column" alignSelf="flex-end" style={styles.linkContainer}>
+                <Flexbox flexDirection="column"  style={styles.linkContainer}>
                   <GitCircle style={styles.links}/>
                   <Flexbox style={styles.linkText}>
                     Code
                 </Flexbox>
                 </Flexbox>
               </a> }
-              { this.props.demoLink && <a href={this.props.demoLink} style={styles.aLink}>
-              <Flexbox flexDirection="column" alignSelf="flex-end" style={styles.linkContainer}>
+              { this.props.demoLink && <a href={this.props.demoLink} target="_blank" style={styles.aLink}>
+              <Flexbox flexDirection="column"  style={styles.linkContainer}>
                 <Play style={styles.links}/>
                 <Flexbox style={styles.linkText}>
                   Demo
@@ -253,7 +267,7 @@ class ProjectCard extends Component {
               </Flexbox>
               </a> }
               { this.props.reportLink && <a href={this.props.reportLink} target="_blank" style={styles.aLink}>
-              <Flexbox flexDirection="column" alignSelf="flex-end" style={styles.linkContainer}>
+              <Flexbox flexDirection="column" style={styles.linkContainer}>
                 <Pdf style={styles.links}/>
                 <Flexbox style={styles.linkText}>
                   Report
@@ -261,7 +275,7 @@ class ProjectCard extends Component {
               </Flexbox>
               </a> }
               { this.props.exSiteLink && <a href={this.props.exSiteLink} target="_blank" style={styles.aLink}>
-              <Flexbox flexDirection="column" alignSelf="flex-end" style={styles.linkContainer}>
+              <Flexbox flexDirection="column"  style={styles.linkContainer}>
                 <Site style={styles.links}/>
                 <Flexbox style={styles.linkText}>
                  {this.props.exSite}
@@ -269,8 +283,6 @@ class ProjectCard extends Component {
               </Flexbox>
               </a> }
               </Flexbox> }
-          </Flexbox>
-
         </Flexbox>
 
     </Flexbox>

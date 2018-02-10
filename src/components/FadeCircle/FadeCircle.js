@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import { slideInLeft, slideOutUp } from 'react-animations';
 import Radium, {StyleRoot} from 'radium';
-import {Rectangle, Circle, Ellipse, Line, Polyline, CornerBox, Triangle} from 'react-shapes';
+import {Circle,} from 'react-shapes';
 
 class FadeCircle extends Component {
 
@@ -48,20 +47,18 @@ class FadeCircle extends Component {
       // the code in here will run some time in the future
       setInterval(() => {
         this.setState(previousState => {
-          const colors = this.state.colors;
           return {
             left: Math.random() * window.innerWidth,
             top: Math.random() * document.body.scrollHeight,
             index: Math.floor(Math.random()*4),
             indexLetter: Math.floor(Math.random()*8),
-          };;
+          };
         });
       }, 5000);
     }, (this.props.letterIndex*1000));
   }
   
   render() {
-    const delay = this.props.letterIndex*500;
     var circleKF =  Radium.keyframes(
       { 
         '0%': { opacity: 0,

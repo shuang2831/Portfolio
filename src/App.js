@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import LandingDiv from './components/LandingDiv/LandingDiv';
 import ProjectCard from './components/ProjectCard/ProjectCard';
 import AboutBlock from './components/AboutBlock/AboutBlock';
 import ContactBlock from './components/ContactBlock/ContactBlock';
 import Flexbox from 'flexbox-react';
-import ReactDOM from 'react-dom';
 import scrollToComponent from 'react-scroll-to-component';
 
 import { connect } from 'react-redux'
@@ -48,7 +46,7 @@ class App extends Component {
   
   handleWindowSizeChange = () => {
     const {dispatch} = this.props
-    dispatch(actionCreators.resizeWindow(window.visualViewport.width))
+    dispatch(actionCreators.resizeWindow(window.screen.width))
   };
 
   handleScrollToElement(blk) {
@@ -64,6 +62,7 @@ class App extends Component {
         </Flexbox> */}
         <div className="fixed-bg" />
         <LandingDiv 
+          isMobile={this.props.isMobile}
           projects={() => this.handleScrollToElement(this.projects)}
           about={() => this.handleScrollToElement(this.about)}
           contact={() => this.handleScrollToElement(this.contact)} />
@@ -150,7 +149,7 @@ class App extends Component {
           title="InfiniBlob"
           mainColor="#4BC34D"
           gitLink="https://github.com/shuang2831/InfiniBlob"
-          demoLink="/InfiniBlob-Web/index.html"
+          demoLink="https://shuang2831.github.io/InfiniBlob-Demo/"
           description={
             `InfiniBlob is a top down 2.5D survival game where the player plays as Lu, InfiniBlob's cube headed protagonist, as he slashes and dashes through endless onslaught
             of blobs that rain from the sky. It starts of slow, but quickly ramps up until blobs take up the entire screen. InfiniBlob gives players a couple simple ways to attack
@@ -213,7 +212,7 @@ class App extends Component {
           isMobile={this.props.isMobile}
           bottomLeftImage={[require('./images/landingPage.PNG'), ]}
         />
-        <AboutBlock ref={(section) => { this.about = section; }}/>
+        <AboutBlock isMobile={this.props.isMobile} ref={(section) => { this.about = section; }}/>
         <ContactBlock ref={(section) => { this.contact = section; }}/>
       </Flexbox>
     );

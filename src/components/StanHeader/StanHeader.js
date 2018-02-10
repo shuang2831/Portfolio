@@ -13,6 +13,7 @@ class StanHeader extends Component {
               <button className="Header-link" onClick={this.props.projects}>Projects</button>
               <button className="Header-link" onClick={this.props.about}>About</button>
               <button className="Header-link" onClick={this.props.contact}>Contact</button>
+              <a className="Header-link" href={require('../../StanHuang_Resume.pdf')} target="_blank" rel="noopener noreferrer" >Resume</a>
             </Flexbox>
         </Flexbox>
     );

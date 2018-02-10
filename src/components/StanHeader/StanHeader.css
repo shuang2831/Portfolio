@@ -27,6 +27,7 @@
     font-family: 'Roboto Slab', serif;
     font-size: 1.2em;
     outline:none;
+    text-decoration: none;
   }
 
   .Header-link:hover {opacity: 0.5;}
