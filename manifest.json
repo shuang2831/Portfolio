@@ -3,9 +3,9 @@
   "name": "Stan Wu Huang's Portfolio",
   "icons": [
     {
-      "src": "logoFill.svg",
+      "src": "logoEdge.ico",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/svg"
+      "type": "image/ico"
     }
   ],
   "start_url": "./index.html",
