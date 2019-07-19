@@ -1,21 +1,23 @@
-import React, { Component } from 'react';
-import './CurrentlyPreviously.css';
-import Flexbox from 'flexbox-react';
+import React, { PureComponent } from "react";
+import "./CurrentlyPreviously.css";
+import Flexbox from "flexbox-react";
 
-
-class CurrentlyPreviously extends Component {
+class CurrentlyPreviously extends PureComponent {
   render() {
     return (
-    <Flexbox flexDirection="row" justify-content="space-between">
-				<Flexbox  flexDirection="column"> Currently: 
-          <img src={this.props.currentLogo} className="imageLogo" />  
+      <Flexbox flexDirection="row" justify-content="space-between">
+        <Flexbox flexDirection="column">
+          {" "}
+          Currently:
+          <img src={this.props.currentLogo} className="imageLogo" />
         </Flexbox>
 
-        <Flexbox  flexDirection="column" style={{marginLeft: 50, height: 20}}> Previously: 
-          <img src={this.props.previousLogo} className="imageLogo"/> 
+        <Flexbox flexDirection="column" style={{ marginLeft: 50, height: 20 }}>
+          {" "}
+          Previously:
+          <img src={this.props.previousLogo} className="imageLogo" />
         </Flexbox>
-
-    </Flexbox>
+      </Flexbox>
     );
   }
 }

@@ -1,22 +1,20 @@
-import React, {Component} from 'react';
-import {StyleRoot} from 'radium';
+import React, { PureComponent } from "react";
+import { StyleRoot } from "radium";
 
-import './InOutGreeting.css';
+import "./InOutGreeting.css";
 
-class InOutGreeting extends Component {
-  
+class InOutGreeting extends PureComponent {
   constructor(props) {
     super(props);
-    this.state = 
-    {
+    this.state = {
       greetings: {
         0: "Hello!",
         1: "Bonjour!",
         2: "你好！",
         3: "Hola!",
-        4: "Aloha!",
+        4: "Aloha!"
       },
-      index:  Math.floor(Math.random()*5),
+      index: Math.floor(Math.random() * 5),
       maxIndex: 4
     };
 
@@ -32,15 +30,11 @@ class InOutGreeting extends Component {
   }
 
   render() {
-  
-
     return (
-    <StyleRoot>
-      <div className="Greeting">
-      {this.state.greetings[this.state.index]}
-      </div>
-    </StyleRoot>
-    )
+      <StyleRoot>
+        <div className="Greeting">{this.state.greetings[this.state.index]}</div>
+      </StyleRoot>
+    );
   }
 }
 

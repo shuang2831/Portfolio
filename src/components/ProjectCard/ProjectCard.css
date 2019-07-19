@@ -2,33 +2,30 @@
   /* Add shadows to create the "card" effect */
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
- 
+
   padding-bottom: 1em;
   padding-top: 1em;
-  background-color: white;
+  background-color: black;
   border-radius: 5px; /* 5px rounded corners */
   flex: 1;
 
   margin-left: auto;
   margin-right: auto;
-
 }
 .cardContainer {
   margin-left: auto;
   margin-right: auto;
   position: relative;
+  align-self: center;
   margin-bottom: 10em;
   z-index: 2;
-  max-width: 1000px;
   flex: 1;
-  flex-direction: row;
 }
 
 /* Add some padding inside the card container */
 
-
 .photoTop {
-  position: absolute; 
+  position: absolute;
   top: -8em;
   left: -4em;
   height: 15em;
@@ -41,7 +38,7 @@
 }
 
 .photoBottom {
-  position: absolute; 
+  position: absolute;
   bottom: -10em;
   left: -5em;
   height: 15em;
@@ -56,7 +53,6 @@
 .card-title {
   text-align: right;
   color: black;
-
 }
 
 .card-description {

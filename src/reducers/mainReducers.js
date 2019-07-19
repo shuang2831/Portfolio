@@ -2,7 +2,7 @@
 export const types = {
   ADD: "ADD",
   REMOVE: "REMOVE",
-  RESIZEWINDOW: "RESIZEWINDOW",
+  RESIZEWINDOW: "RESIZEWINDOW"
 };
 
 // Helper functions to dispatch actions, optionally with payloads
@@ -18,7 +18,7 @@ export const actionCreators = {
 // Initial state of the store
 const initialState = {
   windowWidth: window.screen.width,
-  isMobile: window.screen.width < 500? true : false,
+  isMobile: window.screen.width < 800 ? true : false
 };
 
 // Function to handle actions and update the state of the store.
@@ -39,7 +39,7 @@ export const reducer = (state = initialState, action) => {
       return {
         ...state,
         isMobile: isNowMobile,
-        windowWidth: newWindowWidth,
+        windowWidth: newWindowWidth
       };
     }
     default:

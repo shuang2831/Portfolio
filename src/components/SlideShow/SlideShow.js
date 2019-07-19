@@ -1,17 +1,15 @@
-import React, {Component} from 'react';
-import {Circle} from 'react-shapes';
-import Flexbox from 'flexbox-react';
+import React, { PureComponent } from "react";
+import { Circle } from "react-shapes";
+import Flexbox from "flexbox-react";
 
-class SlideShow extends Component {
-
+class SlideShow extends PureComponent {
   constructor(props) {
     super(props);
-    this.state = 
-    {
+    this.state = {
       photos: props.photos,
       maxIndex: props.photos.length,
       index: 0,
-      colors: [],
+      colors: []
     };
 
     // for (var i = 0; i < this.state.maxIndex; i++) {
@@ -22,7 +20,7 @@ class SlideShow extends Component {
       setInterval(() => {
         this.setState(previousState => {
           let newIndex = this.state.index + 1;
-          if (newIndex >= this.state.maxIndex){
+          if (newIndex >= this.state.maxIndex) {
             newIndex = 0;
           }
           return { index: newIndex };
@@ -30,47 +28,56 @@ class SlideShow extends Component {
       }, 5000);
     }, 5000);
   }
-  
-  render() {  
+
+  render() {
     var styles = {
       circles: {
-        marginTop: '1em',
+        marginTop: "1em"
       }
-    }
+    };
     var indents = [];
     for (var i = 0; i < this.state.maxIndex; i++) {
-        indents.push(
-        <div key={i} style={{marginRight: '0.5em'}}> 
-          <Circle r={3} fill={ (this.state.index === i) ? {color: this.props.chosenColor} : {color:'#d8d8d8'} } /> 
-        </div>);
+      indents.push(
+        <div key={i} style={{ marginRight: "0.5em" }}>
+          <Circle
+            r={3}
+            fill={
+              this.state.index === i
+                ? { color: this.props.chosenColor }
+                : { color: "#d8d8d8" }
+            }
+          />
+        </div>
+      );
     }
     return (
       <Flexbox flexDirection="column" alignItems="center">
-    <img alt="currentPic" onClick={this.nextPic.bind(this)} src={this.state.photos[this.state.index]} style={this.props.style}/>
-      <Flexbox style={styles.circles}>
-        {indents}
+        <img
+          alt="currentPic"
+          onClick={this.nextPic.bind(this)}
+          src={this.state.photos[this.state.index]}
+          style={this.props.style}
+        />
+        <Flexbox style={styles.circles}>{indents}</Flexbox>
       </Flexbox>
-    </Flexbox>
-    )
+    );
   }
 
-  nextClick(idx){
+  nextClick(idx) {
     this.setState({
-      index: idx 
+      index: idx
     });
   }
 
-  nextPic(){
+  nextPic() {
     this.setState(previousState => {
       let newIndex = this.state.index + 1;
-      if (newIndex >= this.state.maxIndex){
+      if (newIndex >= this.state.maxIndex) {
         newIndex = 0;
       }
       return { index: newIndex };
     });
   }
 }
-
-
 
 export default SlideShow;

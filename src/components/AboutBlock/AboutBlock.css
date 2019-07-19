@@ -4,21 +4,20 @@
 
 .aboutContainer {
   align-self: center;
-  z-index: 25;
+  z-index: 27;
   position: relative;
   flex-direction: row;
   display: flex;
 }
 
 .bottomContainer {
-
   background-color: rgba(17, 19, 29, 0.445);
   justify-content: center;
   flex-direction: column;
   display: flex;
-  z-index: 25;
+  z-index: 27;
   position: relative;
-  width: inherit;
+
   padding-left: 2em;
   padding-right: 2em;
   padding-top: 2em;
@@ -28,13 +27,12 @@
 .about {
   max-width: 800px;
   color: white;
-  z-index: 25;
+  z-index: 27;
   position: relative;
-  font-family: 'Open sans, sans-serif';
+  font-family: "Open sans, sans-serif";
   font-size: 1.5em;
   line-height: 2em;
   margin-left: 2em;
-
 }
 
 .aboutTitle {
@@ -42,7 +40,7 @@
   font-size: 4em;
   padding: 0.3em;
   align-self: center;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   text-decoration: underline;
 }
 
@@ -51,7 +49,7 @@
   width: 15em;
   object-fit: cover;
   display: flex;
-  z-index: 25;
+  z-index: 1;
   position: relative;
   border-radius: 50%;
   border: 5px solid rgb(255, 255, 255);

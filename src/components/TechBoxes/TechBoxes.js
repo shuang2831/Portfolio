@@ -1,32 +1,24 @@
-import React, {Component} from 'react';
-import Flexbox from 'flexbox-react';
+import React, { PureComponent } from "react";
+import Flexbox from "flexbox-react";
 
-class TechBoxes extends Component {
-
+class TechBoxes extends PureComponent {
   constructor(props) {
     super(props);
-    this.state = 
-    {
-
-    }
+    this.state = {};
   }
-  
-  render() {  
 
+  render() {
     var boxes = [];
     for (var i = 0; i < this.props.techArray.length; i++) {
-      boxes.push(<div key={i} style={ this.props.boxStyle}>{this.props.techArray[i]}</div>);
+      boxes.push(
+        <div key={i} style={this.props.boxStyle}>
+          {this.props.techArray[i]}
+        </div>
+      );
     }
 
-    return (
-      <Flexbox style={this.props.style}>
-        {boxes}
-      </Flexbox>
-    )
+    return <Flexbox style={this.props.style}>{boxes}</Flexbox>;
   }
-
 }
-
-
 
 export default TechBoxes;

@@ -10,6 +10,7 @@
     "react-blur": "^0.6.0",
     "react-dom": "^16.2.0",
     "react-icons": "^2.2.7",
+    "react-native-super-grid": "^2.4.3",
     "react-redux": "^5.0.6",
     "react-scripts": "1.0.17",
     "react-scroll-to-component": "^1.0.2",
@@ -22,7 +23,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy" : "gh-pages -d build",
+    "deploy": "gh-pages -d build",
     "deployCustom": "gh-pages -d build"
   },
   "devDependencies": {

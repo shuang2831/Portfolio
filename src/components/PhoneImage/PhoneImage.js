@@ -1,24 +1,14 @@
-import React, { Component } from 'react';
-import Flexbox from 'flexbox-react';
-import Radium, {StyleRoot} from 'radium';
-import SlideShow from '../SlideShow/SlideShow';
-import TechBoxes from '../TechBoxes/TechBoxes';
-import Iphone from '../../images/iphone.png'
+import React, { PureComponent } from "react";
 
-class PhoneImage extends Component {
+class PhoneImage extends PureComponent {
   render() {
     var styles = {
       innerContainer: {
-        objectFit: 'contain',
-        width: '3em',
-
+        objectFit: "contain",
+        width: "3em"
       }
-    }
-    return (
-
-        <img style={this.props.style} src={this.props.innerImage} />
-
-    );
+    };
+    return <img style={this.props.style} src={this.props.innerImage} />;
   }
 }
 

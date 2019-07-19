@@ -4,7 +4,6 @@
 
   height: 4000px;
 
-
   /* background-image: url("background5.jpeg"); 
   background-size: cover;
   background-attachment: fixed; */
@@ -14,40 +13,60 @@
   /* background-color: rgba(0,0,0,0.3);
   background-blend-mode: multiply;  */
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cfe7fa+0,6393c1+100;Grey+Blue+3D */
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#606c88+0,3f4c6b+100;Grey+3D+%232 */
-
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#606c88+0,3f4c6b+100;Grey+3D+%232 */
 }
 
 .projects {
-  color: rgb(245, 76, 76);
+  color: rgb(255, 255, 255);
   font-size: 4em;
   padding: 1.5em;
   align-self: center;
+  align-items: center;
   text-align: center;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   text-decoration: underline;
   z-index: 25;
   position: relative;
   justify-content: center;
 }
 
-.wrapper {  
-  background: transparent;  
-}  
-.fixed-bg {  
-  position: fixed;  
-  top: 0;  
-  right: 0;  
-  bottom: 0;  
-  left: 0;  
+.wrapper {
+  background: transparent;
+}
+.fixed-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 
   width: inherit;
   /* background-image: url('background8.jpg');   */
-  background-size: cover;  
-  background-color: rgba(255, 255, 255, 1);
+  background-size: cover;
+  background-color: rgb(66, 76, 99);
 
-  background:linear-gradient(160deg, #ffffff 30%,rgb(198, 207, 235) 100%);
+  /* background: linear-gradient(160deg, #ffffff 10%, rgb(74, 95, 156) 100%); */
   z-index: 0;
+}
+
+.nav-link {
+  padding-left: auto;
+  padding-right: auto;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+  color: white;
+  font-family: "Roboto Slab", serif;
+  font-size: 1em;
+  outline: none;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.nav-link:hover {
+  opacity: 0.5;
 }
 
 /* 
@@ -61,5 +80,4 @@ font-family: 'Quattrocento', serif;
 font-family: 'Asap', sans-serif;
 */
 
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400|Muli|Open+Sans:300,300i,400,600|Oswald:300,400,500|Quattrocento|Roboto+Slab:100,300,400|Roboto:100,300,400,500,700|Asap');
-
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400|Muli|Open+Sans:300,300i,400,600|Oswald:300,400,500|Quattrocento|Roboto+Slab:100,300,400|Roboto:100,300,400,500,700|Asap");
