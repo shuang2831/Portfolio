@@ -45,16 +45,7 @@ class ContactBlock extends PureComponent {
           ||
           <a
             className="contact-link"
-            href="https://twitter.com/lookmomimachair?lang=en"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Twitter
-          </a>
-          ||
-          <a
-            className="contact-link"
-            href={require("../../StanHuang_MyResume.pdf")}
+            href={require("../../StanHuang_Resume-7.pdf")}
             target="_blank"
             rel="noopener noreferrer"
           >

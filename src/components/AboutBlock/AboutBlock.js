@@ -31,13 +31,8 @@ class AboutBlock extends PureComponent {
             <Flexbox style={styles.about}>
               I'm a developer, constantly trying too bridge the gap between
               creating flexible yet engaging human experiences with the use of
-              the latest up and coming tech. My experiences range from being a
-              student, full stack dev, and designer, to roles such as tech lead,
-              architect, and teacher. As a firm believer of servant leadership
-              and quiet empathy, I aspire every day to further maximise the
-              potential of myself and those around me. Previously I graduated
-              from Northwestern University and most recently ran full stack
-              development at Follain.com. Contact me if you'd like to know more!
+              the latest up and coming tech. Contact me if you'd like to know
+              more!
             </Flexbox>
           </Flexbox>
         </Flexbox>

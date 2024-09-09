@@ -34,14 +34,6 @@ class Socialicons extends PureComponent {
         >
           <GitHub className="Icon" />
         </a>
-        <a
-          href="https://twitter.com/lookmomimachair?lang=en"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="social-link"
-        >
-          <Twitter className="Icon" />
-        </a>
       </Flexbox>
     );
   }

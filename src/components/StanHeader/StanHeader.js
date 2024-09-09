@@ -19,7 +19,7 @@ class StanHeader extends PureComponent {
           </button>
           <a
             className="Header-link"
-            href={require("../../StanHuang_MyResume.pdf")}
+            href={require("../../StanHuang_Resume-7.pdf")}
             target="_blank"
             rel="noopener noreferrer"
           >
