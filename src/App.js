@@ -19,6 +19,18 @@ class App extends Component {
     super(props);
     this.projectList = [
       {
+        name: "TrueNorth",
+        reference: this.truenorth
+      },
+      {
+        name: "Careport Health",
+        reference: this.careport
+      },
+      {
+        name: "The VNBA",
+        reference: this.vnba
+      },
+      {
         name: "Follain.com",
         reference: this.follain
       },
@@ -179,14 +191,92 @@ class App extends Component {
           }}
         >
           {" "}
-          Projects{" "}
+          Portfolio{" "}
         </Flexbox>
+        <ProjectCard
+          title="TrueNorth"
+          mainColor="#131C7A"
+          exSite="TrueNorth"
+          exSiteLink="https://www.truenorth.com/"
+          description={`Most recently I joined TrueNorth as their first hired mobile developer and worked on getting the brand new unreleased
+          mobile app to 1.0 status. After about a year of development, we managed to release TrueNorth to our users and saw such immediate benefits
+          that the mobile app shifted from being a side product to our main product all together. I watched as the mobile team, which at one point
+          had gone down to just me, grow to 5+ developers all working on a React Native app that I had ownership of. Check out the app to learn more.`}
+          techArray={[
+            "Android",
+            "iOS",
+            "Javascript",
+            "Typescript",
+            "React Native",
+            "ReactJS",
+            "Rest API",
+            "GraphQL"
+          ]}
+          isMobile={this.props.isMobile}
+          phoneScreen={[
+            require("./images/unnamed.png"),
+            require("./images/unnamed2.png"),
+            require("./images/unnamed3.png"),
+            require("./images/unnamed4.png"),
+            require("./images/unnamed5.png")
+          ]}
+          ref={section => {
+            this.projectList[0].reference = section;
+          }}
+        />
+        <ProjectCard
+          title="Careport Health"
+          mainColor="#28939D"
+          exSite="Careport Health"
+          exSiteLink="https://careporthealth.com/"
+          description={`I spent a few years working on at a company called Careport Health where I came in as a Ruby on Rails developer
+          for their Guide product. Gradually I took on more responsibilities and co-created a front end task force that eventually became
+          its own team focused on building out and finding consistency between Careport's four main products (Guide, Transition, Connect, Insight).
+          As a result of the team's work, Careport's products were brought into the modern world of user experience and execution. Additionally I took on a devops
+          expert role in the company and even helped lead efforts in deployments and simplifying development pipelines. All of these new responsiblities
+          led to my promotion to a Senior Software Engineer. Check out the Careport list
+          of products for more information.`}
+          techArray={[
+            "AWS",
+            "Javascript",
+            "PostgreSQL",
+            "ReactJS",
+            "Ruby on Rails",
+            "Css/Scss"
+          ]}
+          isMobile={this.props.isMobile}
+          bottomLeftImage={[require("./images/guide.png")]}
+          ref={section => {
+            this.projectList[1].reference = section;
+          }}
+        />
+        <ProjectCard
+          title="The VNBA"
+          mainColor="#001529"
+          exSite="The VNBA"
+          exSiteLink="https://thevnba.com/"
+          description={`As a side project, I created a website for a fantasy basketball league some friends and I had running in NBA 2k20. This
+          quickly ballooned in scope as within a year it went from a simple scheduling site to full interaction and compatibility with the game itself.
+          By changing values in a google sheet through the site and using a custom bash script to edit memory values, I was able to update rosters and
+          player data within seconds after a member of our league submitted a change online. We even had a discord bot that was connected to the site and
+          would inform others of said changes. While we are on hiatus right now, you can still check out the site.`}
+          techArray={["VueJS", "MemorryJS", "Bash", "DiscordJS", "NodeJS"]}
+          isMobile={this.props.isMobile}
+          bottomLeftImage={[
+            require("./images/vnba1.png"),
+            require("./images/vnba2.png"),
+            require("./images/vnba3.png")
+          ]}
+          ref={section => {
+            this.projectList[2].reference = section;
+          }}
+        />
         <ProjectCard
           title="Follain.com"
           mainColor="#9eb28f"
           exSite="Follain.com"
           exSiteLink="https://follain.com"
-          description={`Most recently I worked at a clean beauty startup called Follain and was one of its two engineers
+          description={`I worked at a clean beauty startup called Follain and was one of its two engineers
             building out and upkeeping its full stack e-commerce website. With a complex and diverse tech stack attached, our team
             moved quickly in implementing new features such as an online product matchmaker, CMS managed homepages, architectural improvements,
             and more. During the time I was there, we saw the web performance jump to modern standards and reach a level of stability
@@ -205,7 +295,7 @@ class App extends Component {
           isMobile={this.props.isMobile}
           bottomLeftImage={[require("./images/follain.png")]}
           ref={section => {
-            this.projectList[0].reference = section;
+            this.projectList[3].reference = section;
           }}
         />
         <ProjectCard
@@ -236,7 +326,7 @@ class App extends Component {
             require("./images/fintech13.png")
           ]}
           ref={section => {
-            this.projectList[1].reference = section;
+            this.projectList[4].reference = section;
           }}
         />
         <ProjectCard
@@ -256,7 +346,7 @@ class App extends Component {
           isMobile={this.props.isMobile}
           topLeftVideo="https://www.youtube.com/embed/5ZIQabDrnT0"
           ref={section => {
-            this.projectList[2].reference = section;
+            this.projectList[5].reference = section;
           }}
         />
         <ProjectCard
@@ -287,7 +377,7 @@ class App extends Component {
             require("./images/pingpong3.jpg")
           ]}
           ref={section => {
-            this.projectList[3].reference = section;
+            this.projectList[6].reference = section;
           }}
         />
         <ProjectCard
@@ -310,12 +400,12 @@ class App extends Component {
           isMobile={this.props.isMobile}
           phoneScreen={[
             require("./images/pvmnt2.png"),
-            require("./images/home.PNG"),
+            require("./images/home.png"),
             require("./images/subscriptions.PNG"),
             require("./images/upcoming.PNG")
           ]}
           ref={section => {
-            this.projectList[4].reference = section;
+            this.projectList[7].reference = section;
           }}
         />
         <ProjectCard
@@ -351,7 +441,7 @@ class App extends Component {
             require("./images/s12.png")
           ]}
           ref={section => {
-            this.projectList[5].reference = section;
+            this.projectList[8].reference = section;
           }}
         />
         <ProjectCard
@@ -384,7 +474,7 @@ class App extends Component {
             require("./images/dmSummary.PNG")
           ]}
           ref={section => {
-            this.projectList[6].reference = section;
+            this.projectList[9].reference = section;
           }}
         />
         <ProjectCard
@@ -418,7 +508,7 @@ class App extends Component {
             require("./images/l12.png")
           ]}
           ref={section => {
-            this.projectList[7].reference = section;
+            this.projectList[10].reference = section;
           }}
         />
         <ProjectCard
@@ -461,24 +551,7 @@ class App extends Component {
             require("./images/inkrubbing4.PNG")
           ]}
           ref={section => {
-            this.projectList[8].reference = section;
-          }}
-        />
-        <ProjectCard
-          title="My Portfolio"
-          mainColor="rgb(245, 76, 76)"
-          gitLink="https://github.com/shuang2831/Portfolio"
-          description={`This site right here! This portfolio was created using React JS as a side project in order for me to practice some more web design. 
-            While React JS is a little heavier than pure javascript, it allows this site to do a few cool things in response to user states. There are a few little
-            easter eggs scattered about so make sure to keep your eyes peeled for those! Currently the tools I'm using 
-            here are being mapped out to a package that can be leveraged by others to allow them to make their own portolios without having to sacrifice their unique edge
-            that comes with putting their work online for the world to see. 
-            `}
-          techArray={["React JS", "HTML", "Javascript", "Css"]}
-          isMobile={this.props.isMobile}
-          bottomLeftImage={[require("./images/landingPage.PNG")]}
-          ref={section => {
-            this.projectList[9].reference = section;
+            this.projectList[11].reference = section;
           }}
         />
         <AboutBlock

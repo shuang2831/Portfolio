@@ -32,7 +32,7 @@ class InOutGreeting extends PureComponent {
   render() {
     return (
       <StyleRoot>
-        <div className="Greeting">{this.state.greetings[this.state.index]}</div>
+        <div className="Greeting">Hello!</div>
       </StyleRoot>
     );
   }

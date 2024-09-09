@@ -6,13 +6,7 @@ import Flexbox from "flexbox-react";
 class StanHeader extends PureComponent {
   render() {
     return (
-      <Flexbox
-        element="header"
-        className="App-header"
-        flexDirection="row"
-        justify-content="space-between"
-      >
-        <img src={logo} className="App-logo" alt="logo" />
+      <Flexbox element="header" className="App-header" flexDirection="row">
         <Flexbox flexWrap="wrap" className="Header-links">
           <button className="Header-link" onClick={this.props.projects}>
             Projects
